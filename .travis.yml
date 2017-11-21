@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: bU9PcNfKl+X0FBvL+PSWQp19EIWuOCwXyswLUIcoyIv+qvAvzT9Ea5Vl3PfH4owLNW5Z+SvhLvdIuwigXj+zt3Obyl4rtfie7ZSOQyMo2A9ZfHn1mUSrthGLn+f41IDte6wdK7hQrvNXj/ej2SSoiqynPgIcmkBOcWDVzcbsbRUctNz5yPqKyu5HBqsw74KXKaSyV2VApN/n67F3v38PRgjS7Q3WzZeU5mdTJ1MmWNeYZb6JLsrGZLCu05xmiUFhR10XujAMFepNNezBsO5lPRhf/QVu01jVi3iIn5sAMFccrSvOdljSTXaVTY2xOlecgJsyzawpQ7aYgpySHCy/cpk16MFe4hDIkrwS4tK7uAwTIf2Rrg+S80Q0WW66p0DTnjg72p2+6re+t+ykFZWQZeBt8w4D1if/eUGj3YRcFY2aoalMO57Mb3Oly+JDWHOsqsHVCfg2XFnyZEPIjPRxWOJq1XuGw/p5/ByziqwHVRl9Bxnf9vpwyEPx6EpmRv6eY1kqWKMoeJ/S1SexSARBT3o3i9AOOvEWM0l43G3YtCKfn59drXuXpTQLmhekcP/5XBfusLwo8Ba2w9aKXoSTWHchzt6HxL77921by2HPyrPIxMl6iFv+KLz2f9I7FO8bMQ4+cvG1iOeWvfuRwg9LFIzj6Z+JndEHg1MHcD9zA2I=
+  app: pure-bastion-86929
+  on:
+    repo: sollertis8/Blog-API
