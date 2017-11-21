@@ -4,7 +4,8 @@
   "description": "Serves client that allows users to add, create, delete, and update blog posts",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha ./test"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -17,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sollertis8"
+    "url": "git+https://github.com/sollertis8/Blog-API"
   },
   "keywords": [
     "node",
@@ -25,5 +26,11 @@
     "express"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/sollertis8/Blog-APIr#eadme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.1.2"
+  },
   "author": "Korrenti Mayweather"
 }
