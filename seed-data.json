@@ -1,0 +1,9 @@
+{
+    "title" : "Our Trip to Los Angeles", 
+    "content" : "Our recent trip to Los Angeles was exciting! Our flight was smooth and we stayed at the Westin Bonaventure Hotel.", 
+    "author" : {
+        "firstName": "Korre", 
+        "lastname" : "Mayweather"
+    }, 
+    "publishDate" : "11-12-2017"
+}
