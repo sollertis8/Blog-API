@@ -27,12 +27,12 @@ blogPostSchema.methods.apiRepr = function() {
     id: this._id,
     title: this.title,
     content: this.content,
-    author: this.author,
+    author: this.authorName,
     publishDate: this.publishDate
   };
 }
 
-const BlogPost = mongoose.model('BlogPost', blogPostSchema);
+const BlogPost = mongoose.model('BlogPost', blogPostSchema, 'BlogPost');
 
 module.exports = {BlogPost};
 

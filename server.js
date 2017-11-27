@@ -3,11 +3,11 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose =require('mongoose');
 
-
-const {PORT, DATABASE_URL} = require('./config');
+mongoose.Promise = global.Promise;
+const {DATABASE_URL, PORT} = require('./config');
 const {BlogPost} = require('./models');
 
-mongoose.Promise = global.Promise;
+
 
 const app = express();
 
@@ -18,11 +18,14 @@ app.get('/posts', (req, res) => {
   BlogPost
     .find()
     .then(posts => {
-      res.json(posts.map(post => post.apiRepr()));
+      res.json({
+        posts: posts.map(
+          (post) => post.apiRepr())
+      });
     })
     .catch(err => {
       console.error(err);
-      res.status(500).json({error: 'something went terribly wrong'});
+      res.status(500).json({error: 'internal server error'});
     });
 });
 
@@ -95,7 +98,7 @@ app.post('/posts', (req, res) => {
 });
 
 app.delete('/:id', (req, res) => {
-  BlogPosts
+  BlogPost
     .findByIdAndRemove(req.params.id)
     .then(() => {
       console.log(`Deleted blog post with id \`${req.params.ID}\``);
